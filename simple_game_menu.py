@@ -7,38 +7,34 @@ while True:
     choice = input("Enter your choice (1 or 2): ")
     
     if choice == "1":
-        # Character Selection Menu
+        # Difficulty Selection Menu
         while True:
-            print("\n===== CHARACTER SELECTION =====")
-            print("1. Paladin")
-            print("2. Warrior")
-            print("3. Archer")
-            print("4. Mage")
+            print("\n===== CHOOSE DIFFICULTY =====")
+            print("1. Easy")
+            print("2. Medium")
+            print("3. Hard")
+            print("4. Impossible")
             print("5. Back")
+
+            difficulty_choice = input("Choose difficulty (1-5): ")
             
-            character_choice = input("Choose your character (1-5): ")
-            
-            if character_choice == "1":
-                print("\nStarting game as Paladin!")
-                # Your game code would go here
+            if difficulty_choice == "1":
+                print("\nStarting game in Easy difficulty!")
                 break
             
-            elif character_choice == "2":
-                print("\nStarting game as Warrior!")
-                # Your game code would go here
+            elif difficulty_choice == "2":
+                print("\nStarting game in Medium difficulty!")
                 break
             
-            elif character_choice == "3":
-                print("\nStarting game as Archer!")
-                # Your game code would go here
+            elif difficulty_choice == "3":
+                print("\nStarting game in Hard difficulty!")
                 break
             
-            elif character_choice == "4":
-                print("\nStarting game as Mage!")
-                # Your game code would go here
+            elif difficulty_choice == "4":
+                print("\nStarting game in Impossible difficulty!")
                 break
             
-            elif character_choice == "5":
+            elif difficulty_choice == "5":
                 print("\nGoing back to main menu...")
                 break
             

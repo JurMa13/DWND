@@ -3,8 +3,9 @@ while True:
     print("\n========== MAIN MENU ==========")
     print("1. New Game")
     print("2. Quit")
+    print("3. Settings")  # Nová volba
     
-    choice = input("Enter your choice (1 or 2): ")
+    choice = input("Enter your choice (1, 2 or 3): ")
     
     if choice == "1":
         # Difficulty Selection Menu
@@ -45,5 +46,4 @@ while True:
         print("\nThanks for playing! Goodbye!")
         break
     
-    else:
-        print("\nInvalid choice! Please enter 1 or 2.")
+  

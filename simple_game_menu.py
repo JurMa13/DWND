@@ -3,7 +3,7 @@ while True:
     print("\n========== MAIN MENU ==========")
     print("1. New Game")
     print("2. Quit")
-    print("3. Settings")  # Nová volba
+    
     
     choice = input("Enter your choice (1, 2 or 3): ")
     

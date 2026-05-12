@@ -61,3 +61,52 @@ while True:
 
     else:
         print("\nInvalid choice! Please enter 1, 2, or 3.")
+
+
+class Dvere:
+    def __init__(self, nazev, zamceno=False, klic=None):
+        self.nazev = nazev
+        self.je_otevreno = False
+        self.je_zamceno = zamceno
+        self.potrebny_klic = klic
+
+    def otevrit(self, hrac_ma_klic=None):
+        if self.je_otevreno:
+            print(f"[{self.nazev}] Dveře už jsou otevřené.")
+            return
+
+        if self.je_zamceno:
+            if hrac_ma_klic == self.potrebny_klic:
+                print(f"[{self.nazev}] Odemkl jsi dveře pomocí: {hrac_ma_klic}.")
+                self.je_zamceno = False
+            else:
+                print(f"[{self.nazev}] Dveře jsou zamčené! Potřebuješ: {self.potrebny_klic}.")
+                return
+
+        self.je_otevreno = True
+        print(f"[{self.nazev}] Vrz... Dveře se otevřely.")
+
+    def zavrit(self):
+        if not self.je_otevreno:
+            print(f"[{self.nazev}] Dveře už jsou zavřené.")
+        else:
+            self.je_otevreno = False
+            print(f"[{self.nazev}] Prásk! Zavřel jsi dveře.")
+
+# --- TESTOVÁNÍ HRY ---
+
+# 1. Vytvoříme dvoje různé dveře
+vchodove_dvere = Dvere("Vchod", zamceno=True, klic="Zlatý klíč")
+dvere_do_kuchyne = Dvere("Kuchyně")
+
+# 2. Zkusíme otevřít zamčené dveře bez klíče
+vchodove_dvere.otevrit() 
+
+# 3. Otevřeme obyčejné dveře
+dvere_do_kuchyne.otevrit()
+
+# 4. Otevřeme zamčené dveře se správným klíčem
+vchodove_dvere.otevrit("Zlatý klíč")
+
+# 5. Zavřeme dveře
+vchodove_dvere.zavrit()
